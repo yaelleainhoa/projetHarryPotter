@@ -1,0 +1,566 @@
+/* STYLE POUR FIREFOX */
+
+
+
+/* Style de la page*/
+
+    body{
+        font-family: Roboto;
+        color: white;
+        }
+
+
+    .backgroundImage {
+        /*z-index: 1;*/
+        position: fixed;
+        display: block;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: auto;
+        width: 100%;
+        filter: blur(4px) brightness(1.1) opacity(0.35);
+        mix-blend-mode: screen;
+
+    }
+
+    .contenu {
+        z-index: 1;
+        height: 95vh;
+        left: 0;
+        right: 0;
+        margin: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h1, h2, h3 {
+        font-family: Oswald;
+    }
+    .menuReduit{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        cursor: pointer;
+    }
+    .imageMenu{
+        height: 20px;
+        width: 35px;
+    }
+    .bouttonBack{
+        height: 25px;
+        width: auto;
+        cursor: pointer;
+    }
+    .menuTitre{
+        font-size: 16px;
+        margin-top: 5px;
+        
+    }
+    .menuGrand{
+        background-color: rgba(255, 255, 255, 0.3);
+        width: 100px;
+        height: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-left: -30px;
+        transform: translateX(-100px);
+
+    }
+
+
+    .menuGrand.menuTranslate1{
+        animation: translX 0.75s forwards;
+    }
+
+
+    .menuGrand.menuTranslate2{
+        animation: translX2 0.5s forwards ;
+    }
+
+    .menuGrand.sousBoutonPlus1{
+        animation: translXPlus 0.75s forwards;
+    }
+
+    .menuGrand.sousBoutonPlus2{
+        animation: translX2Plus 0.75s forwards;
+
+    }
+
+    .current{
+        opacity: 0.35;
+
+    }
+    .home{
+        margin-top: 10px;
+        height: 30px;
+        width: auto;
+        cursor: pointer;
+    }
+
+    h3{
+        font-size: 15px;
+        font-weight: 200;
+        cursor: pointer;
+    }
+    h1{
+        font-size: 35px;
+        margin-top: 60px;
+        
+    }
+
+/* Page créateur */
+
+
+    .createur{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+    }
+
+
+    .photo{
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .imageCreateur{
+        z-index: 18;
+        width: auto;
+        height: 595px;
+    
+    }
+    .photo {
+        animation: moveUpDown 4s ease-in-out infinite alternate;
+    }
+    .explications{
+        z-index: 18;
+        width: 650px;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+    }
+    .explicationsCreateur{
+        text-align: center;
+        margin-right: 60px;
+    }
+    .seeStudent{
+        border: solid;
+        width: fit-content;
+        align-self: flex-end;
+        padding: 10px;
+        border-radius: 30px;
+        margin-right: 20px;
+        margin-top: 20px;
+        font-size: 12px;
+        border-width: thin;
+        cursor: pointer;
+
+    }
+    a.lienPageMaison {
+        color: rgb(255, 255, 255);
+        text-decoration:none;
+    }
+    .navigation{
+        z-index: 20;
+    }
+
+
+
+/*passage entre deux pages*/
+
+    .show{
+    visibility: visible;
+        animation: translX 0.5s forwards ;
+
+    }
+
+
+    .hide{
+        visibility: hidden;
+        animation: translX2 0.5s forwards;
+        overflow-y: scroll;
+        z-index: 0;
+        height: 0px;
+    }
+
+
+
+/*page eleves*/
+
+    .boutonPlus{
+        border-radius: 50%;
+        border:solid;
+        height: 35px;
+        width: 35px;
+        text-align: center;
+        border-width: 1px;
+        position: absolute;
+        top: 75px;
+        cursor: pointer;
+    }
+
+    .plus{
+        bottom: 115%;
+        font-size: 20px;
+        position: relative;
+    }
+
+
+    .pagesEleves{
+        display: flex;
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #eleves{
+        display: flex;
+        justify-content: center;
+    }
+    .elevesPos{
+        margin-top:-100vh;
+    }
+    .elevesPosBis{
+        margin-top: 0px;
+    }
+
+    .fiche{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-left:6%;
+        margin-right:6%;
+        padding-bottom:5%;
+        text-transform : uppercase;
+    }
+
+
+    .conteneur{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .image{
+        width: 150px;
+        height: auto;
+    
+    }
+
+
+
+/* Form sélection */
+
+    #management {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: center;
+        z-index: 30;
+        position: relative;
+        margin-top: -100vh;
+        margin-bottom: 20px;
+        opacity: 0;
+    
+    }
+    .fadeIn{
+        animation: fadeIn 0.75s forwards;
+        visibility: visible;
+    }
+
+    .fadeOut{
+        animation: fadeOut 0.75 forwards;
+        visibility: hidden;
+    }
+    .backgroundManagement{
+        background: RGBA(255,255,255, 0.33);
+        border-radius: 30px;
+        padding: 20px;
+
+    }
+    .selecteurManagement{
+        display: flex;
+        flex-direction: column;
+    }
+    .selecteurElements{
+        margin: 5px;
+        text-align: center;
+        background: RGBA(255,255,255, 0);
+        border: white;
+        border: solid;
+        border-width: thin;
+        border-color: white;
+        padding: 5px;
+    }
+
+
+
+
+
+/* Version mobile*/ 
+
+@media (max-width: 767px) {
+  
+    body {
+        font-family: Roboto;
+        background-color: #340C0C;
+        overflow-y: auto;
+    }
+
+    .backgroundImage{
+       /* z-index: 1;*/
+        position: fixed;
+        height: auto;
+        mix-blend-mode: screen;
+        left: -150px;
+        width: 100vh;
+        filter: blur(0.5px) brightness(1.1) opacity(0.35);
+    }
+
+    .contenu{
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        height: fit-content;
+        margin: 15px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        flex-direction: column;
+    }
+    .menuReduit{
+        position: fixed;
+    }
+    .hideMenuReduit{
+        visibility: hidden;
+    }
+
+    .imageMenu{
+        height: 15px;
+        width: 27px;
+    }
+    .menuTitre{
+        font-size: 12px;
+        margin-top: 5px;
+    }
+    .menuGrand{
+        background-color: rgba(255, 255, 255, 0.3);   
+        justify-content: space-around;
+        width: 300px;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: 0px;
+        transform: translateX(0px);
+        transform: translateY(-100px);
+        position: fixed;
+        z-index: 22;
+        margin-top: -22px;
+    }
+    .home{
+        margin-top: 0px;
+        margin-left: 15px;
+        height: 20px;
+        width: auto;  
+        cursor: pointer;
+    }
+    .menuMaison{
+        display: flex;  
+    }
+
+    h3{
+        font-size: 12px;
+        font-weight: 200;
+        cursor: pointer;
+        margin-left: 2.5px;
+        margin-right: 2.5px;
+    }
+
+    .bouttonBack{
+        cursor: pointer;
+        height: 20px;
+        margin-right: 20px;
+        width: auto;
+    }
+
+    .createur {
+        z-index: 18;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    .photo{
+        border-radius: 50%;
+        overflow: hidden;
+        width: 250px;
+        height: 250px;
+    }
+    .imageCreateur{
+        width: auto;
+        height: 410px;
+    }
+    h1{
+        margin-top: 25px;
+        font-size: 20px;
+    }
+    .explications{
+        width: auto;
+    }
+    .explicationsCreateur{
+        font-size: 12px;
+        margin-right: 0px;
+        text-align: center;
+    }
+    .seeStudent {
+        border: solid;
+        width: fit-content;
+        padding: 10px;
+        border-radius: 30px;
+        margin-top: 20px;
+        font-size: 12px;
+        border-width: thin;
+        cursor: pointer;
+        margin-right: 0px;
+        align-self: center;
+    }
+    .menuGrand.menuTranslate3{
+        animation: translY 0.75s forwards ;
+    
+    }
+    .menuGrand.menuTranslate4{
+        animation: translY2 0.5s forwards ;}
+
+
+    .boutonPlus{
+        height: 25px;
+        width: 25px;
+        top: 10%;
+        position: fixed;  
+    }
+    #management {
+        top:100px;
+        height: 50vh;
+    }
+    .backgroundManagement{
+        display: flex;
+        height: 50%;
+    }
+    .selecteurManagement{
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .selecteurElements{
+        width: 200px;
+    }
+    .Valider{
+        background-color: white;
+        border: none;
+        border-radius: 60px;
+        width: 100px;
+        padding: 5px;
+    }
+
+    .plus{
+        bottom: 70%;
+        font-size: 10px;
+    }
+    .pagesEleves{
+        justify-content: center ;
+    }
+
+    #eleves{
+        position: relative;
+        top:500px;
+    }
+    
+
+    
+
+
+}
+
+
+
+ /* Animations */ 
+    
+    @keyframes fadeIn {
+        from {
+        opacity: 0;
+        }
+        to {
+        opacity: 1;
+        }
+    }
+
+    @keyframes translX {
+    from {
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(0px);
+    }}
+    
+    
+    @keyframes translX2 {
+    from {
+        transform: translateX(0px);
+        }
+    to {
+        transform: translateX(-100px);
+    }}
+
+
+
+    @keyframes translXPlus {
+    from {
+        transform: translate3d(-100px, 50px, 0px);
+    }
+    to {
+        transform: translate3d(0px, 50px, 0px);
+    }}
+    
+    
+    @keyframes translX2Plus{
+    from {
+        transform: translate3d(0px, 50px, 0px);
+        }
+    to {
+        transform: translate3d(-100px, 50px, 0px);
+    }}
+
+    @keyframes translY {
+    from {
+        transform: translateY(-100px);
+    }
+    to {
+        transform: translateY(0px);
+    }}
+    @keyframes translY2 {
+    from {
+        transform: translateY(0px);
+        }
+    to {
+        transform: translateY(-100px);
+    }}
+
+    @keyframes moveUpDown {
+    from {
+        transform: translateY(-12px);
+        }
+    to {
+        transform: translateY(12px);
+        }
+    }

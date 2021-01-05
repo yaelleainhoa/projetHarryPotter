@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+
+body{
+    background: url(images/poudlardFond.png) no-repeat center fixed; 
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Roboto";
+    color: whitesmoke;
+    font-family: 'Oswald', sans-serif;
+    text-transform:none;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.logo{
+    padding:10px;
+    position: absolute;
+    left:30px;
+    z-index: 5;
+}
+
+.choixMaison{
+    position: relative;
+    margin: auto;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+    animation: apparitionFondu 1.5s linear;
+    font-size: 32px;
+}
+
+.telephone{
+    opacity:0;
+}
+
+
+.maisons{
+    display: flex;
+    align-items: center ;
+    position:relative;
+    justify-content: space-evenly;
+}
+
+.nomMaison{
+    text-align: center;
+    font-size: 25px;
+    margin:5px;
+}
+
+.maison:hover{
+    animation: moveUpDown 3s ease-in-out infinite alternate;
+}
+
+a.lienPageMaison {
+    color: rgb(255, 255, 255);
+    text-decoration:none;
+}
+
+.blason{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding:15px;
+    border:solid #FFFFFF 1px;
+}
+
+
+@keyframes apparitionFondu{
+    0%{
+        
+        top:-50%;
+        opacity:0;
+    }
+    50%{
+        
+        top:-20%;
+        opacity:0.2;
+    }
+
+    80%{
+        opacity:0.5;
+    }
+    100%{
+        
+        top:0%;
+        opacity:1;
+    } 
+}
+@keyframes moveUpDown {
+	from {
+      transform: translateY(0px);
+	}
+    to {
+      transform: translateY(-30px);
+    }
+  }
+
+@media (max-width:767px){
+    .logo{
+        padding: 0px;
+        height: 35px;
+        top: 25px;
+        left: 25px;
+    }
+    .maisons{
+        flex-direction: column;
+        top: 20%;
+    }
+
+    .maison{
+        padding:160px;
+    }
+
+    .telephone{
+        position: absolute;
+        left:230px;
+        top:25%;
+        opacity:1;
+    }
+
+    .ordinateur{
+        opacity: 0;
+    }
+
+    .choixMaison{
+        background-color: #131526;
+        position: absolute;
+        width: 100%;
+        text-align: right;
+        animation: none;
+        font-size: 8px;
+        font-family: "Roboto", sans-serif;
+        padding-right:20px;
+    }
+}

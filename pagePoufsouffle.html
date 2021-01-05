@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            let nav = navigator.userAgent.indexOf("Chrome") // indexOf retourne l'index de la première occurence de "Chrome" dans 'navigato.userAgent' et renvoie -1 si l'element n'apparait pas, ici si le navigateur n'est pas chrome on renvoie -1
+            if (nav!= -1) {
+            document.write("<link type=\"text/css\" rel=\"stylesheet\" href=\"style.css\">");
+            }
+            else {
+            document.write("<link type=\"text/css\" rel=\"stylesheet\" href=\"styleFirefox.css\">");
+            }
+            </script>
+        <meta charset="utf-8">
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title> Helga Hufflepuff </title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet"> 
+
+    </head>
+
+    <body>
+    <style> body {background-color:#361401} ; </style> 
+        
+        <img src="images/poufsouffleSalle.png" class="backgroundImage"> 
+        <section class="contenu"> 
+
+            <div class="navigation">
+                <div class= " boutonPlus hide">
+                    <h6 class="plus">+</h6>
+                </div>
+                <div class="menuReduit">
+                    <img  class="imageMenu"src="images/menu.png" alt="Icone menu">
+                    <h2 class="menuTitre">MENU</h2>
+                </div>
+                <div class="menuGrand">
+                    <a href="accueil.html"> <img  class="home"src="images/boutonHome.png" alt="Accueil"> </a>
+                        <div class="menuMaison">
+                            <a class="lienPageMaison" href="pageGryffondor.html"><h3>Gryffindor</h3></a>
+                            <a class="lienPageMaison" href="pagePoufsouffle.html"><h3 class="current">Hufflepuff</h3></a>
+                            <a class="lienPageMaison" href="pageSerdaigle.html"><h3>Ravenclaw</h3></a>
+                            <a class="lienPageMaison" href="pageSerpentard.html"><h3>Slytherin</h3></a>
+                        </div>
+                        
+                    <img class="bouttonBack"src="images/boutonBack.png" alt="bouton retour">
+
+                </div>                   
+            </div>
+
+            <div class="createur">
+                <div class="photo">
+                    <img class="imageCreateur"src="images/helgaPoufsouffle.jpg" alt="Helga Poufsouffle">
+                </div>
+                <div class="rectangle"></div>
+                <h1>HELGA HUFFLEPUFF </h1>
+
+            </div>
+
+            <div class="explications">
+                <p class="explicationsCreateur"> HHelga Hufflepuff was a Welsh witch and was one of the four founders of Hogwarts. 
+                    We don't know much about her descendance, except that one of her relics, a small golden cup, 
+                    belonged to one of her descendants before Tom Marvolo Riddle seized it. The symbol of her house is a badger.
+                    <br> <br>
+
+                    While the other founders chose to have special students, she accepted them all without preference, 
+                    but the students of her house are described as loyal and hard-working. 
+                    She was a woman of tolerance, willing to accept Muggle-born students unlike Slytherin. 
+                    She also Took in the housse-elves to work in Hogwarts Kitchen, a place were they wouldn't be abused and bullied. 
+                    <br> <br>
+                    
+                    Fun fact: She was highly gifted in food-related charms and many of her recipes are still used in Hogwarts today.
+                    
+                     </p>
+
+                 <div class="seeStudent"> The students > </div>
+
+            </div>
+
+        </section>
+
+        <section id="management" >
+            <div class="backgroundManagement" >
+                 <form class="selecteurManagement">
+                     <select class="selecteurElements" id="genre"> 
+                         <option value="neutre">-- Gender --</option>
+                         <option value="female">Female</option>
+                         <option value="male">Male</option>
+                     </select>
+ 
+                     <select class="selecteurElements" id ="age">
+                         <option value="neutre">-- Year of birth --</option> 
+                         <option value ="1925">1925</option>
+                         <option value ="1926">1926</option>
+                         <option value ="1928">1928</option>
+                         <option value ="1951">1951</option>
+                         <option value ="1954">1954</option>
+                         <option value ="1959">1959</option>
+                         <option value ="1960">1960</option>
+                         <option value ="1977">1977</option>
+                         <option value ="1979">1979</option>
+                         <option value ="1980">1980</option>
+                         <option value ="1981">1981</option>
+                     </select>
+ 
+                     <select class="selecteurElements" id = "espece"> 
+                         <option value="neutre">-- Species --</option>
+                         <option value ="human">Human</option>
+                         <option value ="half-giant">Half-giant</option>
+                     </select>
+                     <button class="SelecteurElements Valider" type="button" onclick="createPoufsouffle()">Validate</button>
+                 </form>
+             </div>
+         </section>
+
+        <section id="eleves" class="hide">
+
+
+
+            <div id="Poufsouffle" class="pagesEleves">
+
+            </div>   
+            
+        </section>
+
+    </body>
+    <script type="text/javascript" src="script.js"></script>
+
+
+</html>
